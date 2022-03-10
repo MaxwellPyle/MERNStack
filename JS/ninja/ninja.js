@@ -1,5 +1,5 @@
 class Ninja{
-constructor(fullName, health) {
+constructor(fullName, health =10) {
         this.fullName = fullName;
         this.health = health;
         this.speed = 3;
@@ -19,4 +19,3 @@ constructor(fullName, health) {
         return this;
     }
 }
-
