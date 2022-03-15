@@ -28,18 +28,18 @@ const BoxForm = () => {
         <form onSubmit={submitHandler}>
             <div className="form-group">
                 <label htmlFor="color">Color:</label>
-                <input type="text" name="color" id ="" className="form-control" onChange={(e)=>{setColor(e.target.value)}}/>
+                <input type="text" name="color" id ="" className="form-control" onChange={(e)=>{setColor(e.target.value)}} value = {color}/>
             </div>            
             <div className="form-group">
                 <label htmlFor="sideLength">Side length:</label>
-                <input type="text" name="sideLength" id ="" className="form-control" onChange={(e)=>{setSideLength(e.target.value)}}/>
+                <input type="text" name="sideLength" id ="" className="form-control" onChange={(e)=>{setSideLength(e.target.value)}} value = {sideLength}/>
             </div>
             <input type="submit" className="btn btn-dark mt-2" value = "Add A Box!"/>
         </form>
         <div className="d-flex">
         {
             boxList.map(box=> {
-                return <div style={{backgroundColor: box.color, height: "", width: "200px"}}>
+                return <div style={{backgroundColor: box.color, height: box.sideLength + "px", width: box.sideLength + "px"}}>
 
                 </div>
             })
