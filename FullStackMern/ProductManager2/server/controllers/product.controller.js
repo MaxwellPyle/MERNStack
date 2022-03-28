@@ -18,7 +18,7 @@ module.exports.getOneProduct = (req, res) => {
 }
 
 module.exports.createProduct = (req, res) => {
-    console.log("req.body", req.body);
+    console.log("req.body: ", req.body);
     Product.create(req.body)
         .then(newlyCreatedProduct => {
             res.json({ results: newlyCreatedProduct })
