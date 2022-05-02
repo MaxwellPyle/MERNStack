@@ -36,7 +36,7 @@ const FileUpload = () => {
             setFilteredList([]);
         }
         for (let i = 0; i < customerList.length; i++){
-            if(isMatch(customerList[i].dateOfBirth, 'MM/dd/yyyy') && customerList[i].cellPhone !== null && customerList[i].dateOfBirth.slice(0,1) === monthFilter){
+            if(isMatch(customerList[i].dateOfBirth, 'MM/dd/yyyy') && customerList[i].cellPhone !== null && (customerList[i].dateOfBirth.slice(0,1) === monthFilter || customerList[i].dateOfBirth.slice(0,2) === monthFilter)){
                 filteredList.push(customerList[i]);
             }
         }
