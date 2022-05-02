@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb+srv://dbUser:root@cluster0.k0mol.mongodb.net/twilio_interview_database?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://dbUser:root@cluster0.k0mol.mongodb.net/customerDB?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
